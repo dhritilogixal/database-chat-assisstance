@@ -150,7 +150,7 @@ def get_stats():
 
 @app.post("/table")
 def get_table(req: TableRequest):
-    allowed_tables = ["orders", "returns"]
+    allowed_tables = ["orders", "returns","customers"]
     if req.table_name not in allowed_tables:
         return {"error": "Invalid table name"}
     try:
